@@ -1,3 +1,3 @@
 ## PAI Lab assignment 
 
-Debugging in JavaScript
+Text files and JSON
