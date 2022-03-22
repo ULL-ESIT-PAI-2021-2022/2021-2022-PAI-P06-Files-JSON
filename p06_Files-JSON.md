@@ -34,55 +34,110 @@ y que es capaz de generar documentación para sus programas utilizando la herram
 * Acreditar que es capaz de editar ficheros de forma remota en su VM usando Visual Studio
   Code (VSC)
 
-### Trabajo previo
-Estudie las transparencias y ejemplos del trabajo presentado en clase sobre TDD y cubrimiento de código.
+### Indicaciones de caracter general
+A la hora de resolver los problemas que se le proponen, trate de usar exclusivamente las características de
+JavaScript que ha estudiado en clase o bien en el material que se le ha pedido que estudie de forma autónoma.
+
+Descarte soluciones avanzadas y nunca utilice código que no sea Ud. capaz de comprender y explicar a otra
+persona.
 
 Cuando desarrolle los siguientes ejercicios genere informes de cubrimiento de código utilizando tanto Jest
 como CodeCov.
 Consiga que los informes de cubrimiento de CodeCov se puedan visualizar a través de una web ejecutada en su
 servidor local de la máquina virtual de la asignatura.
 
+Configure para esta práctica una página web que sirva de índice para mostrar la documentación generada por
+JSDoc para todos los programas que desarrolle.
 
-### Ejercicios de Exercism
-Resuelva los siguientes problemas ejecutando los tests correspondientes a cada uno de ellos hasta conseguir
-que todos pasen correctamente. 
-Una vez que lo logre, suba su solución a Exercism.
-* [Armstrong Numbers](https://exercism.org/tracks/javascript/exercises/armstrong-numbers)
-* [Darts](https://exercism.org/tracks/javascript/exercises/darts)
-* [Prime Factors](https://exercism.org/tracks/javascript/exercises/prime-factors)
-* [Strain](https://exercism.org/tracks/javascript/exercises/strain). 
-  Las funciones que ha de programar, *keep()* y *discard()* toman ambas dos parámetros, 
-  un array y una función booleana (un predicado) y devuelven un array que contiene (keep) o no (discard) los elementos del array de entrada para los que el predicado es cierto.
-* [Yacht](https://exercism.org/tracks/javascript/exercises/yacht)
-  Si analiza el programa que realiza los tests (`yacht.spec.js`) observará que la función *score()* ha de tener dos parámetros: 
-  un array con las puntuaciones de los lanzamientos de 5 dados y una cadena (string) con el nombre de la jugada y ha de devolver 
-  la puntuación correspondiente a esa jugada.
+### Trabajo previo
+Estudie las transparencias y ejemplos del trabajo presentado en clase sobre TDD y cubrimiento de código.
 
-### Ejercicios de Jutge
-Para cada uno de los siguientes problemas de 
-[Jutge](https://jutge.org/)
-haga que la entrada que requieran los programas que solucionan el problema se tome por línea de comandos.
+Estudie el capítulo 10 
+[Modules](https://eloquentjavascript.net/10_modules.html) de Eloquent JavaScript y
+el 
+[correspondiente apartado](https://javascript.info/modules)
+del Modern JS Tutorial.
 
-Haga también que los programas incluyan documentación en formato JSDoc. 
-Genere la documentación en formato HTML para cada uno de los programas y haga que dicha documentación 
-sea accesible a través de una web alojada en su máquina virtual.
-Se propone desarrollar una página *índice* desde la que se enlacen las páginas de documentación de cada uno de
-estos programas.
+Estudie a continuación el tutorial
+[Read/Write JSON Files with Node.js](https://medium.com/@osiolabs/read-write-json-files-with-node-js-92d03cc82824).
 
-Desarrolle tests unitarios en 
-[Jest](https://jestjs.io/)
-para probar la corrección de cada una de las soluciones.
-Aparte de los tests públicos de Jutge, incluya algunos tests adicionales para comprobar situaciones que
-considere relevantes.
-Si su solución se basa en varias funciones, desarrolle tests para cada una de ellas.
+### Lectura/Escritura de ficheros de texto en JavaScript
+En el directorio raíz de este proyecto dispone de los ficheros
+`read-file-lines.js` y `read-file.js`
+que pueden servirle de punto de partida para estudiar por su cuenta cómo leer y escribir ficheros de texto en JavaScript
 
-1. [P15695](https://jutge.org/problems/P15695_en) Largest Prime Factor
-2. [P58459](https://jutge.org/problems/P58459_en) Valid Dates. La entrada del problema deberían ser tres números: DD MM AA
-3. [X19883](https://drive.google.com/file/d/1aoN7uj0KX6RvWtngTqYMqpxep2_P-XFc/view?usp=sharing) Code with cipher 3 reversed 
-4. [P20262](https://jutge.org/problems/P20262_en) Maximum sums
-5. [P12061](https://jutge.org/problems/P12061) Words between two words
+**1.-** Desarrolle un programa `my_wc.js` que se comporte como el comando `wc` (word count) de Unix, es decir, que tome como parámetro por línea 
+de comandos el nombre de un fichero de texto e imprima en pantalla el número de líneas, palabras y caracteres (bytes) que contiene el fichero.
+
+Compruebe el correcto funcionamiento de su programa con diferentes ficheros de texto comprobando que su programa funcione exactamente igual que wc.
+
+### Tratamiento de Datos. Formato JSON.
+En [este repositorio](https://github.com/samayo/country-json) se encuentran disponibles diversos datos en
+formato JSON que contienen información relativa a diferentes países: sus nombres, capitales, moneda, religión,
+población, etc.
+
+Utilice el [visualizador on-line de JSON](http://jsonviewer.stack.hu/) para una primera toma de contacto con
+esos datos.
+
+**2.-** Comience por escribir diferentes módulos (ficheros `.js`; se propone usar módulos en formato CommonJS), 
+uno para cada tipología de datos, en los que se incluyan en
+forma de variables (ha de elegir el tipo de variable a utilizar) la información por países correspondiente a un determinado aspecto (idioma, religión, etc.)
+de cada país.
+Así por ejemplo el módulo `country-population.js` debería contener una entidad (variable, constante, objeto, ...) que almacenara los datos de población de cada uno de los países.
+Ese módulo debería 
+[exportar](https://javascript.info/import-export#export-before-declarations)
+esa variable para hacerla disponible a otros programas JavaScript.
+
+La forma más simple de leer un fichero JSON es usar `require`.
+Invocando `require()` con la ruta a un archivo JSON se leerán y analizarán los datos de forma síncrona en un objeto JavaScript:
+```js
+const paises = require('./paises.json')
+```
+
+**3.-** Desarrolle a continuación un programa `combine-country-data.js`que permita combinar en un único fichero `country-data.json` un conjunto de métricas
+para todos los países considerados.
+Haga que ese fichero `country-data.json` contenga al menos la siguiente información para cada uno de los
+países:
+
+1. Nombre
+2. Abreviatura del nombre
+3. Altura promedio de los varones (Avg Male Height)
+4. Capital de cada país
+5. Continente
+6. Moneda
+7. Código de la moneda
+8. Religión
+9. Altura
+10. Esperanza de vida
+11. Número de habitantes
+12. Densidad de Población
+13. Superficie
+14. Temperatura promedio
+
+Utilice nuevamente el 
+[visualizador on-line de JSON](http://jsonviewer.stack.hu/) 
+para mostrar el contenido del fichero JSON que ha creado.
+
+**4.-** Desarrolle como siguiente paso un programa `contry-stats.js` que utilice los datos que ha agregado para
+imprimir en pantalla la información que da respuesta a las siguientes cuestiones:
+
+1. El país más poblado del mundo es P1 (X habitantes) y el menos poblado es P2 (Y habitantes).
+2. El país con mayor densidad de población en América es P3.
+3. Los 3 países con mayor esperanza de vida en cada uno de los continentes son: ...
+4. La media de la altura promedio de los varones en cada uno de los continentes es: 
+5. Los porcentajes correspondientes (en función del número de países con cada religión) a las 5 religiones más
+  extendidas en el mundo son:
+6. Los países con más bajas temperaturas en cada uno de los continentes son los siguientes:
+
+El programa `country-stats.js` debería imprimir en pantalla, como única salida, frases como las que figuran en los puntos
+anteriores, con los datos correspondientes a cada caso.
+Así la primera línea debiera ser algo similar a (datos figurados):
+
+`El país más poblado del mundo es China (1409517397 habitantes) y el menos poblado es Andorra (76965 habitantes)`. 
 
 ## Referencias
+* [CodeCov](https://docs.codecov.com/docs)
+* [Visualizador on-line de JSON](http://jsonviewer.stack.hu/) 
 * [Node.js debugging in VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 * [Jest](https://jestjs.io/)
 * [ESLint](https://eslint.org/)
