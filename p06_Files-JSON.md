@@ -1,19 +1,26 @@
-# Práctica 5. Depuración en Javascript
-### Factor de ponderación: 5
+# Práctica 6. Ficheros. JSON.
+### Factor de ponderación: 6
 
 ### Objetivos
 Los objetivos de esta práctica son:
-* Aprender a utilizar diferentes herramientas de depuración para JavaScript
-* Aprender a depurar programas JavaScript en Visual Studio Code
-* Ser capaz de desarrollar programas simples en JavaScript en el entorno Linux de la VM de la asignatura usando
-  Node.js
+* Ser capaz de procesar ficheros de texto en JavaScript
+* Conocer el formato JSON y las herramientas de JS que permiten su tratamiento
+* Trabajar con arrays y los métodos correspondientes a este tipo de objetos
+* Practicar la generación de informes de cubrimiento de código usando Jest y/o CodeCoverage
 
 ### Rúbrica de evaluacion del ejercicio
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
 que se tendrán en cuenta a la hora de evaluar esta práctica:
 * Se valorará la realización de las diferentes tareas que se proponen
+* Acreditar que se sabe generar informes de cubrimiento de código utilizando tanto 
+[Jest](https://jestjs.io/)
+como
+[CodeCov](https://docs.codecov.com/docs)
+* Ante la presencia de bugs, el alumnado sabe utilizar el depurador de Visual Studio Code
+* Deben usarse estructuras de datos adecuadas para representar los diferentes elementos que intervienen en el problema
 * Saber corregir bugs en un programa utilizando el depurador de Visual Studio Code
-* Ser capaz de desarrollar tests unitarios para sus programas utilizando Jest.
+* Ser capaz de desarrollar tests unitarios para sus programas utilizando 
+[Jest](https://jestjs.io/)
 * Acreditar que conoce la herramienta 
 [ESLint](https://eslint.org/)
 y que es capaz de trabajar con la misma en Visual Studio Code.
@@ -28,20 +35,12 @@ y que es capaz de generar documentación para sus programas utilizando la herram
   Code (VSC)
 
 ### Trabajo previo
-Estudie las transparencias y ejemplos del trabajo presentado en clase sobre Depuración de código en
-JavaScript.
+Estudie las transparencias y ejemplos del trabajo presentado en clase sobre TDD y cubrimiento de código.
 
-Estudie igualmente las secciones correspondientes a 
-[Arrays](https://javascript.info/array),
-[Array methods](https://javascript.info/array-methods),
-[Iterables](https://javascript.info/iterable)
-y
-[Strings](https://javascript.info/string)
-del Modern JavaScript Tutorial para repasar la forma de trabajar en JS con estas estructuras de datos.
-
-Cuando desarrolle los siguientes ejercicios, ante la presencia de cualquier bug (o incluso en ausencia de
-errores) practique el uso del 
-[depurador integrado en Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
+Cuando desarrolle los siguientes ejercicios genere informes de cubrimiento de código utilizando tanto Jest
+como CodeCov.
+Consiga que los informes de cubrimiento de CodeCov se puedan visualizar a través de una web ejecutada en su
+servidor local de la máquina virtual de la asignatura.
 
 
 ### Ejercicios de Exercism
