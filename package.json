@@ -1,34 +1,33 @@
 {
-  "name": "Files and JSON",
-  "description": "PAI Lab assignment",
+  "name": "p06-files-json",
   "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs",
-    "test": "tests"
+  "description": "PAI Lab assignment 06",
+  "main": "read-file-lines.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "argparse": "^2.0.1",
     "eslint": "^7.27.0",
     "eslint-config-google": "^0.14.0",
+    "express": "^4.17.1",
     "jsdoc": "^3.6.6",
-    "readline-sync": "1.4.10",
-    "yargs": "17.3.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-doc": "node_modules/.bin/jsdoc --configure jsdoc-conf.json --verbose"
+    "readline": "^1.3.0",
+    "readline-sync": "1.4.10"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P06-Files-JSON.git"
+    "url": "git+https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P06-Files-JSON.git"
   },
   "keywords": [
     "PAI",
-    "JavaScript",
-    "Lab"
+    "Javascript",
+    "file",
+    "JSON"
   ],
   "author": "F de Sande",
-  "license": "MIT",
-  "homepage": "https://github.com/fsande/PAI-class-code-examples#readme"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P06-Files-JSON/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P06-Files-JSON#readme"
 }

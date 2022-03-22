@@ -13,7 +13,7 @@
 
 'use strict';
 
-const {readFile} = require("fs");
+const {readFile} = require('fs');
 
 readFile("input.txt", (error, buffer) => {
   if (error) throw error;

@@ -16,6 +16,8 @@
 const fs = require('fs');
 const readline = require('readline');
 
+// const readlineSync = require('../../node_modules/readline-sync/');
+
 async function processLineByLine() {
   const fileStream = fs.createReadStream('input.txt');
 

@@ -1,5 +1,5 @@
 # Práctica 6. Ficheros. JSON.
-### Factor de ponderación: 6
+### Factor de ponderación: 7
 
 ### Objetivos
 Los objetivos de esta práctica son:
@@ -91,7 +91,7 @@ esa variable para hacerla disponible a otros programas JavaScript.
 La forma más simple de leer un fichero JSON es usar `require`.
 Invocando `require()` con la ruta a un archivo JSON se leerán y analizarán los datos de forma síncrona en un objeto JavaScript:
 ```js
-const paises = require('./paises.json')
+const paises = require('./json/paises.json')
 ```
 
 **3.-** Desarrolle a continuación un programa `combine-country-data.js`que permita combinar en un único fichero `country-data.json` un conjunto de métricas
