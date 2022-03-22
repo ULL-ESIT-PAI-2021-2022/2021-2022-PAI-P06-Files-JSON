@@ -41,17 +41,10 @@ JavaScript que ha estudiado en clase o bien en el material que se le ha pedido q
 Descarte soluciones avanzadas y nunca utilice código que no sea Ud. capaz de comprender y explicar a otra
 persona.
 
-Cuando desarrolle los siguientes ejercicios genere informes de cubrimiento de código utilizando tanto Jest
-como CodeCov.
-Consiga que los informes de cubrimiento de CodeCov se puedan visualizar a través de una web ejecutada en su
-servidor local de la máquina virtual de la asignatura.
-
 Configure para esta práctica una página web que sirva de índice para mostrar la documentación generada por
 JSDoc para todos los programas que desarrolle.
 
 ### Trabajo previo
-Estudie las transparencias y ejemplos del trabajo presentado en clase sobre TDD y cubrimiento de código.
-
 Estudie el capítulo 10 
 [Modules](https://eloquentjavascript.net/10_modules.html) de Eloquent JavaScript y
 el 
@@ -72,6 +65,10 @@ de comandos el nombre de un fichero de texto e imprima en pantalla el número de
 Compruebe el correcto funcionamiento de su programa con diferentes ficheros de texto comprobando que su programa funcione exactamente igual que wc.
 
 ### Tratamiento de Datos. Formato JSON.
+Trabaje en este ejercicio de forma incremental. 
+No intente directamente una solución del problema sino trate de alcanzar hitos sucesivos que le aproximen a la 
+solución final del ejercicio.
+
 En [este repositorio](https://github.com/samayo/country-json) se encuentran disponibles diversos datos en
 formato JSON que contienen información relativa a diferentes países: sus nombres, capitales, moneda, religión,
 población, etc.
