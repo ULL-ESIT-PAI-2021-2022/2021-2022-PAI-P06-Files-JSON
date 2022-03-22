@@ -1,83 +1,95 @@
-# Práctica 2. Programas Simples (II). Exercism
+# Práctica 5. Depuración en Javascript
 ### Factor de ponderación: 5
 
 ### Objetivos
 Los objetivos de esta práctica son:
-  
-* Ser capaz de realizar programas simples en JavaScript
-* Conocer y saber utilizar la plataforma Exercism
-* Conocer y poner en prácticas las recomendaciones de la Guía de Estilo de Google para JavaScript
+* Aprender a utilizar diferentes herramientas de depuración para JavaScript
+* Aprender a depurar programas JavaScript en Visual Studio Code
+* Ser capaz de desarrollar programas simples en JavaScript en el entorno Linux de la VM de la asignatura usando
+  Node.js
 
 ### Rúbrica de evaluacion del ejercicio
 Se señalan a continuación los aspectos más relevantes (la lista no es exhaustiva)
 que se tendrán en cuenta a la hora de evaluar esta práctica:
-* El alumnado ha de acreditar que es capaz de desarrollar y ejecutar programas de la plataforma Exercism
-* El alumnado debe ser capaz de subir la solución a un problema de Exercism a esa plataforma
-* Se comprobará que el código que el alumnado escribe se adhiere a las reglas de la Guía de Estilo que se
-  usará en la asignatura
+* Se valorará la realización de las diferentes tareas que se proponen
+* Saber corregir bugs en un programa utilizando el depurador de Visual Studio Code
+* Ser capaz de desarrollar tests unitarios para sus programas utilizando Jest.
+* Acreditar que conoce la herramienta 
+[ESLint](https://eslint.org/)
+y que es capaz de trabajar con la misma en Visual Studio Code.
+* Acreditar que conoce la herramienta 
+[JSDoc](https://jsdoc.app/)
+y que es capaz de generar documentación para sus programas utilizando la herramienta.
+* Ser capaz de resolver problemas de la plataforma Exercism, subiendo sus soluciones a la misma.
+* Acreditar que es capaz de desarrollar y ejecutar programas simples de la plataforma Jutge
+* Se comprobará que el código que el alumnado escribe se adhiere a las reglas de la Guía de Estilo de Google
+  para Javascript
+* Acreditar que es capaz de editar ficheros de forma remota en su VM usando Visual Studio
+  Code (VSC)
 
-### Indicaciones de caracter general
-A la hora de resolver los problemas que se le proponen, trate de usar exclusivamente las características de
-JavaScript que ha estudiado en clase o bien en el material que se le ha pedido que estudie.
+### Trabajo previo
+Estudie las transparencias y ejemplos del trabajo presentado en clase sobre Depuración de código en
+JavaScript.
 
-Descarte soluciones avanzadas y nunca utilice código que no sea Ud. capaz de comprender y explicar a otra
-persona.
+Estudie igualmente las secciones correspondientes a 
+[Arrays](https://javascript.info/array),
+[Array methods](https://javascript.info/array-methods),
+[Iterables](https://javascript.info/iterable)
+y
+[Strings](https://javascript.info/string)
+del Modern JavaScript Tutorial para repasar la forma de trabajar en JS con estas estructuras de datos.
 
-Los programas que escriba han de seguir **fielmente** todas las indicaciones de la 
-[Guía de estilo de Google para JavaScript](https://google.github.io/styleguide/jsguide.html).
-Estudie esa guía omitiendo todo lo que se refiera a características avanzadas del lenguaje que no haya Ud.
-estudiado aún.
-Preste particular atención a los siguientes aspectos:
-* Reglas para nombres (identificadores) de diferente tipología (constantes, variables, parámetros, funciones, ...)
-* [Formateo](https://google.github.io/styleguide/jsguide.html#formatting) del código
-* Utilización de los
-  [espacios en blanco](https://google.github.io/styleguide/jsguide.html#formatting-horizontal-whitespace)
-* Comentarios de ["cabecera"](https://google.github.io/styleguide/jsguide.html#jsdoc-top-file-level-comments) para sus programas. 
-  Para este aspecto se recomienda utilizar una "plantilla" base de comentarios que incluya información tal
-  como: Universidad, Titulación, Asignatura, Proyecto, Autor, Fecha, ... que irá siempre seguido de una
-  descripción más o menos exhaustiva del programa en cuestión
-Esa guía de estilo es la que se utilizará en la asignatura y la conformidad de todos los programas presentados como prácticas es un requisito en la evaluación de los mismos.
+Cuando desarrolle los siguientes ejercicios, ante la presencia de cualquier bug (o incluso en ausencia de
+errores) practique el uso del 
+[depurador integrado en Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
 
-### Prime Factors
-Localice en el track de JavaScript de Exercism el problema 
-[*Prime Factors*](https://exercism.io/my/solutions/fce10654772240b3b22955cd5aeb855a)
-y descárguelo en su máquina virtual. 
-Resuelva ese problema. 
 
-La función que ha de escribir es una *arrow function* que tendría la siguiente *signature*:
+### Ejercicios de Exercism
+Resuelva los siguientes problemas ejecutando los tests correspondientes a cada uno de ellos hasta conseguir
+que todos pasen correctamente. 
+Una vez que lo logre, suba su solución a Exercism.
+* [Armstrong Numbers](https://exercism.org/tracks/javascript/exercises/armstrong-numbers)
+* [Darts](https://exercism.org/tracks/javascript/exercises/darts)
+* [Prime Factors](https://exercism.org/tracks/javascript/exercises/prime-factors)
+* [Strain](https://exercism.org/tracks/javascript/exercises/strain). 
+  Las funciones que ha de programar, *keep()* y *discard()* toman ambas dos parámetros, 
+  un array y una función booleana (un predicado) y devuelven un array que contiene (keep) o no (discard) los elementos del array de entrada para los que el predicado es cierto.
+* [Yacht](https://exercism.org/tracks/javascript/exercises/yacht)
+  Si analiza el programa que realiza los tests (`yacht.spec.js`) observará que la función *score()* ha de tener dos parámetros: 
+  un array con las puntuaciones de los lanzamientos de 5 dados y una cadena (string) con el nombre de la jugada y ha de devolver 
+  la puntuación correspondiente a esa jugada.
 
-```js
-export const primeFactors = () => {
-};
-```
-que tendrá como parámetro un número entero y ha de devolver un array que contenga todos los factores primos del número pasado como parámetro.
+### Ejercicios de Jutge
+Para cada uno de los siguientes problemas de 
+[Jutge](https://jutge.org/)
+haga que la entrada que requieran los programas que solucionan el problema se tome por línea de comandos.
 
-Estudie
-[este tutorial](https://javascript.info/array)
-para conocer los fundamentos necesarios para trabajar con arrays en JavaScript. 
+Haga también que los programas incluyan documentación en formato JSDoc. 
+Genere la documentación en formato HTML para cada uno de los programas y haga que dicha documentación 
+sea accesible a través de una web alojada en su máquina virtual.
+Se propone desarrollar una página *índice* desde la que se enlacen las páginas de documentación de cada uno de
+estos programas.
 
-Ejecute los tests que acompañan al problema para comprobar que todos pasan correctamente y cuando lo consiga, suba su solución a Exercism.
+Desarrolle tests unitarios en 
+[Jest](https://jestjs.io/)
+para probar la corrección de cada una de las soluciones.
+Aparte de los tests públicos de Jutge, incluya algunos tests adicionales para comprobar situaciones que
+considere relevantes.
+Si su solución se basa en varias funciones, desarrolle tests para cada una de ellas.
 
-Una vez que suba su solución a la plataforma, revise la solución que hayan subido otros usuarios y compárelas
-con la suya.
+1. [P15695](https://jutge.org/problems/P15695_en) Largest Prime Factor
+2. [P58459](https://jutge.org/problems/P58459_en) Valid Dates. La entrada del problema deberían ser tres números: DD MM AA
+3. [X19883](https://drive.google.com/file/d/1aoN7uj0KX6RvWtngTqYMqpxep2_P-XFc/view?usp=sharing) Code with cipher 3 reversed 
+4. [P20262](https://jutge.org/problems/P20262_en) Maximum sums
+5. [P12061](https://jutge.org/problems/P12061) Words between two words
 
-Una vez que su programa funcione en consola, consiga que funcione en una página web similar a la que se ha usado para el cálculo de Pi. 
-
-### Strain
-Localice en el track de JavaScript de Exercism el problema 
-[*Strain*](https://exercism.io/my/solutions/03d029e7331642fd8a15501eb1ae64bf)
-y descárguelo en su máquina virtual. 
-Resuelva ese problema. 
-
-Las funciones que ha de programar, *keep()* y *discard()* toman ambas dos parámetros, un array 
-y una función booleana (un predicado) y devuelven un array que contiene (keep) o no (discard) 
-los elementos del array de entrada para los que el predicado es cierto.
-
-### Yacht
-Localice en el track de JavaScript de Exercism el problema 
-[*Yacht*](https://exercism.io/my/solutions/5f2e1e4332fd419abf2ea365b05b4e3b)
-y descárguelo en su máquina virtual. Resuelva ese problema. 
-
-Si analiza el programa que realiza los tests (`yacht.spec.js`) observará que la función *score()* ha de tener dos parámetros: 
-un array con las puntuaciones de los lanzamientos de 5 dados y una cadena (string) con el nombre de la jugada y ha de devolver 
-la puntuación correspondiente a esa jugada.
+## Referencias
+* [Node.js debugging in VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+* [Jest](https://jestjs.io/)
+* [ESLint](https://eslint.org/)
+* [JSDoc](https://jsdoc.app/)
+* [Exercism](https://exercism.io/)
+* [Jutge web site](https://jutge.org/)
+* [The Modern Javascript Tutorial](https://javascript.info)
+* [PAI Code Examples](https://github.com/ULL-ESIT-PAI-2021-2022/PAI-class-code-examples/tree/master/src)
+* [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)

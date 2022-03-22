@@ -5,7 +5,7 @@
   * Programación de Aplicaciones Interactivas
   *
   * @author F. de Sande
-  * @since 9.Mar.2021
+  * @since March 9 2021
   * @desc Reading a text file
   *       
   * @see {@link https://eloquentjavascript.net/20_node.html}
