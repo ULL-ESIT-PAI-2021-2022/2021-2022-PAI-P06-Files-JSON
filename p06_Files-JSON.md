@@ -85,6 +85,10 @@ Ese módulo debería
 [exportar](https://javascript.info/import-export#export-before-declarations)
 ese objeto para hacerlo disponible a otros programas JavaScript.
 
+Estudie y utilice convenientemente la etiqueta `@module` de
+[JSDoc](https://jsdoc.app/tags-module.html) 
+para documentar convenientemente esos módulos. 
+
 En cada uno de esos módulos la forma más simple de leer un fichero JSON es usar `require`.
 Invocando `require()` con la ruta a un archivo JSON se leerán y analizarán los datos de forma síncrona en un objeto JavaScript:
 ```js
