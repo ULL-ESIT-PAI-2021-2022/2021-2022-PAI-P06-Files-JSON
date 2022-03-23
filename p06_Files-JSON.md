@@ -76,20 +76,23 @@ población, etc.
 Utilice el [visualizador on-line de JSON](http://jsonviewer.stack.hu/) para una primera toma de contacto con
 esos datos.
 
-**2.-** Comience por escribir diferentes módulos (ficheros `.js`; se propone usar módulos en formato CommonJS), 
+**2.-** Comience por escribir diferentes módulos (ficheros `*.js`; se propone usar en esta práctica módulos en formato CommonJS), 
 uno para cada tipología de datos, en los que se incluyan en
 forma de variables (ha de elegir el tipo de variable a utilizar) la información por países correspondiente a un determinado aspecto (idioma, religión, etc.)
 de cada país.
-Así por ejemplo el módulo `country-population.js` debería contener una entidad (variable, constante, objeto, ...) que almacenara los datos de población de cada uno de los países.
+Así por ejemplo el módulo `country-population.js` debería contener un objeto que almacenara los datos de población de cada uno de los países.
 Ese módulo debería 
 [exportar](https://javascript.info/import-export#export-before-declarations)
-esa variable para hacerla disponible a otros programas JavaScript.
+ese objeto para hacerlo disponible a otros programas JavaScript.
 
-La forma más simple de leer un fichero JSON es usar `require`.
+En cada uno de esos módulos la forma más simple de leer un fichero JSON es usar `require`.
 Invocando `require()` con la ruta a un archivo JSON se leerán y analizarán los datos de forma síncrona en un objeto JavaScript:
 ```js
 const paises = require('./json/paises.json')
 ```
+Comience por desarrollar uno de estos modos y comprobar (tests) su correcto funcionamiento para diferentes
+entradas.
+Una vez disponga de uno de los módulos, desarrolle tests y código para todos los que se requieren.
 
 **3.-** Desarrolle a continuación un programa `combine-country-data.js`que permita combinar en un único fichero `country-data.json` un conjunto de métricas
 para todos los países considerados.
